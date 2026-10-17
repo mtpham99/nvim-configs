@@ -51,3 +51,16 @@ vim.opt.confirm = true
 vim.opt.undofile = true
 vim.opt.swapfile = true
 vim.opt.autoread = true
+
+-- diagnostics
+vim.diagnostic.config {
+  virtual_text = { spacing = 2 },
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+  float = {
+    border = 'rounded',
+    source = true,
+  },
+}
