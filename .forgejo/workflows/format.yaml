@@ -1,0 +1,26 @@
+---
+name: format
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  stylua:
+    name: stylua
+    runs-on: codeberg-tiny
+    steps:
+      - name: checkout
+        uses: https://data.forgejo.org/actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: setup styLua
+        run: |
+          curl -fsSL \
+            https://github.com/JohnnyMorganz/StyLua/releases/download/v2.6.0/stylua-linux-x86_64.zip \
+            -o /tmp/stylua.zip
+          unzip -q /tmp/stylua.zip -d /tmp
+          chmod +x /tmp/stylua
+      - name: stylua
+        run: /tmp/stylua --check .
+...
