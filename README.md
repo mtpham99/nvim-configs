@@ -15,6 +15,7 @@ My [neovim](https://neovim.io/) configuration files.
 | [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | git diff markers and hunk actions |
 | [which-key.nvim](https://github.com/folke/which-key.nvim) | keybind hints menu  |
 | [todo-comments.nvim](https://github.com/folke/todo-comments.nvim) | highlight **TODO**/**NOTE**/**FIXME** comments |
+| [guess-indent.nvim](https://github.com/NMAC427/guess-indent.nvim) | automatically infer and set indent size |
 
 
 # references
